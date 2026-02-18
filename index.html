@@ -3,141 +3,237 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shashwathi | WordPress Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Shashwathi K S | WordPress Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+scroll-behavior:smooth;
 }
 
-body {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: #fff;
+body{
+background:#0f172a;
+color:#fff;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 10%;
-  position: fixed;
-  width: 100%;
-  backdrop-filter: blur(10px);
-  background: rgba(0,0,0,0.3);
-	z-index:999;
+/* ================= NAVBAR ================= */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+position:fixed;
+width:100%;
+background:rgba(15,23,42,0.8);
+backdrop-filter:blur(10px);
+z-index:999;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:0.3s;
 }
 
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 20px;
+nav a:hover{
+color:#3b82f6;
 }
 
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
+/* ================= HERO ================= */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 10%;
 }
 
-.hero p {
-  margin-top: 15px;
-  font-size: 1.3rem;
-  color: #cbd5e1;
+.hero-left{
+width:55%;
 }
 
-.btn {
-  margin-top: 30px;
-  padding: 12px 30px;
-  background: #3b82f6;
-  border-radius: 30px;
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
+.hero-left h1{
+font-size:3.5rem;
+font-weight:800;
 }
 
-.btn:hover {
-  background: #2563eb;
+.gradient{
+background:linear-gradient(90deg,#3b82f6,#9333ea);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-section {
-  padding: 100px 10%;
+.hero-left h2{
+margin-top:20px;
+font-size:1.5rem;
+color:#cbd5e1;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 50px;
-  font-size: 2.5rem;
+.hero-desc{
+margin-top:20px;
+color:#94a3b8;
+line-height:1.6;
+max-width:500px;
 }
 
-.glass {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  padding: 30px;
-  border-radius: 15px;
-  transition: 0.3s;
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:12px 30px;
+background:linear-gradient(90deg,#3b82f6,#9333ea);
+border-radius:30px;
+text-decoration:none;
+color:#fff;
+font-weight:600;
+transition:0.3s;
 }
 
-.glass:hover {
-  transform: translateY(-10px);
+.btn:hover{
+transform:translateY(-3px);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+.hero-right{
+width:40%;
+position:relative;
+display:flex;
+justify-content:center;
 }
 
-footer {
-  text-align: center;
-  padding: 30px;
-  background: rgba(0,0,0,0.4);
-  margin-top: 50px;
+.profile-img{
+width:320px;
+border-radius:20px;
+position:relative;
+z-index:2;
 }
 
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 1s ease;
+.image-glow{
+position:absolute;
+width:350px;
+height:350px;
+background:radial-gradient(circle,rgba(59,130,246,0.6),rgba(147,51,234,0.4));
+filter:blur(80px);
+border-radius:50%;
+z-index:1;
 }
 
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-.hero h1 {
-  font-size: 4rem;
-  font-weight: 800;
+/* ================= STATS ================= */
+
+.stats{
+display:flex;
+justify-content:space-around;
+padding:60px 10%;
+background:rgba(255,255,255,0.03);
 }
 
-.hero h2 {
-  margin-top: 20px;
-  font-size: 1.5rem;
-  color: #cbd5e1;
+.stat-box{
+text-align:center;
 }
 
-.gradient {
-  background: linear-gradient(90deg, #3b82f6, #06b6d4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.stat-box h3{
+font-size:2.5rem;
+background:linear-gradient(90deg,#3b82f6,#9333ea);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
-section {
-  scroll-margin-top: 120px;
+
+/* ================= SECTIONS ================= */
+
+section{
+padding:100px 10%;
+scroll-margin-top:120px;
+}
+
+h2{
+text-align:center;
+margin-bottom:50px;
+font-size:2.5rem;
+}
+
+/* ================= GLASS CARDS ================= */
+
+.glass{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.glass:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(59,130,246,0.2);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+/* ================= PROJECT IMAGE CARD ================= */
+
+.project-card{
+position:relative;
+overflow:hidden;
+border-radius:15px;
+}
+
+.project-card img{
+width:100%;
+display:block;
+transition:0.5s;
+}
+
+.project-card:hover img{
+transform:scale(1.1);
+}
+
+.project-overlay{
+position:absolute;
+bottom:0;
+background:linear-gradient(transparent,rgba(0,0,0,0.9));
+width:100%;
+padding:20px;
+}
+
+/* ================= CONTACT ================= */
+
+footer{
+text-align:center;
+padding:30px;
+background:rgba(0,0,0,0.4);
+margin-top:50px;
+}
+
+@media(max-width:900px){
+.hero{
+flex-direction:column;
+text-align:center;
+height:auto;
+padding-top:150px;
+}
+
+.hero-left,
+.hero-right{
+width:100%;
+}
+
+.stats{
+flex-direction:column;
+gap:30px;
+}
 }
 
 </style>
@@ -146,142 +242,164 @@ section {
 <body>
 
 <nav>
-  <div><strong>Shashwathi K S</strong></div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
+<div><strong>Shashwathi K S</strong></div>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
+<!-- HERO -->
+
 <div class="hero">
-  <h1>Hi, I'm <span class="gradient">Shashwathi K S</span></h1>
-  <h2><span id="typing"></span></h2>
-  <a href="Shashwathi_Resume.pdf" class="btn">Download Resume</a>
+<div class="hero-left">
+<h1>Hi, I'm <span class="gradient">Shashwathi K S</span></h1>
+<h2><span id="typing"></span></h2>
+<p class="hero-desc">
+WordPress Developer with 6 years of experience building high-performing,
+SEO-optimized and scalable websites. Successfully delivered 150+ projects.
+</p>
+<a href="Shashwathi_Resume.pdf" class="btn" download>Download Resume</a>
 </div>
 
+<div class="hero-right">
+<div class="image-glow"></div>
+<img src="profile.jpg" alt="Shashwathi" class="profile-img">
+</div>
+</div>
 
-<section id="about" class="fade">
-  <h2>About Me</h2>
-  <div class="glass">
-    <p>
-     Hi, my name is Shashwathi K S. I have been working as a WordPress Developer since 2020, and I have around 6 years of total work experience in web development.
+<!-- STATS -->
 
-I have worked with two companies so far, where I handled end-to-end website development projects. Over the years, I have worked extensively with popular page builders such as Elementor, Gutenberg, WP Bakery, and Spectra. I have also worked with themes like Astra and OceanWP.
+<section class="stats">
+<div class="stat-box">
+<h3>6+</h3>
+<p>Years Experience</p>
+</div>
+<div class="stat-box">
+<h3>150+</h3>
+<p>Projects Completed</p>
+</div>
+<div class="stat-box">
+<h3>100%</h3>
+<p>Client Satisfaction</p>
+</div>
+</section>
 
-In addition to development, I have strong experience in SEO and website optimization. I have worked on on-page SEO, metadata implementation, schema setup, and improving website speed and performance. I focus on creating websites that are not only visually appealing but also optimized for search engines and fast loading.
+<!-- ABOUT -->
+
+<section id="about">
+<h2>About Me</h2>
+<div class="glass">
+<p>
+Hi, my name is <strong>Shashwathi K S</strong>. I have been working as a WordPress Developer since 2020, with a total of 6 years of experience in web development.
+</p>
+
 <br>
-I also have experience working with WooCommerce and Shopify websites, handling e-commerce setups, product configurations, payment integrations, and performance optimization. So far, I have successfully completed more than 150 projects across different industries.
 
-I am passionate about delivering high-quality websites, solving technical issues efficiently, and continuously improving my skills. I am now looking for an opportunity where I can contribute my expertise and grow further as a developer.
-    </p>
-  </div>
+<p>
+I have worked with two companies where I handled end-to-end website development projects. Over the years, I have gained strong experience working with popular page builders such as Elementor, Gutenberg, WP Bakery, and Spectra. I have also worked extensively with themes like Astra and OceanWP.
+</p>
+
+<br>
+
+<p>
+In addition to development, I have strong expertise in SEO and website optimization. I have worked on on-page SEO, metadata implementation, schema setup, and improving website speed and performance. My focus is on building websites that are not only visually appealing but also optimized for search engines and fast loading.
+</p>
+
+<br>
+
+<p>
+I also have hands-on experience with WooCommerce and Shopify, including e-commerce setup, product configuration, payment gateway integration, and performance optimization. So far, I have successfully completed <strong>150+ projects</strong> across various industries.
+</p>
+
+<br>
+
+<p>
+I am passionate about delivering high-quality websites, solving technical challenges efficiently, and continuously improving my skills. I am currently looking for opportunities where I can contribute my expertise and grow further as a developer.
+</p>
+</div>
 </section>
 
-<section id="skills" class="fade">
-  <h2>Skills</h2>
-  <div class="grid">
-    <div class="glass">WordPress Development</div>
-    <div class="glass">Elementor & Gutenberg</div>
-	   <div class="glass">Wp Bekary & Spectra</div>
-    <div class="glass">WooCommerce</div>
-    <div class="glass">SEO & Speed Optimization</div>
-    <div class="glass">Schema & Metadata</div>
-    <div class="glass">HTML, CSS, JavaScript</div>
-  </div>
+
+<!-- SKILLS -->
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="grid">
+<div class="glass">WordPress Development</div>
+<div class="glass">Elementor & Gutenberg</div>
+<div class="glass">WP Bakery & Spectra</div>
+<div class="glass">WooCommerce</div>
+<div class="glass">SEO & Speed Optimization</div>
+<div class="glass">Schema & Metadata</div>
+<div class="glass">HTML, CSS, JavaScript</div>
+</div>
 </section>
 
-<section id="projects" class="fade">
-  <h2>Projects</h2>
-  <div class="grid">
-    <div class="glass">
-      <h3>E-commerce Store</h3>
-      <p>WooCommerce store with performance optimization.</p>
-    </div>
-    <div class="glass">
-      <h3>Corporate Website</h3>
-      <p>Elementor + Astra custom design.</p>
-    </div>
-	  <div class="glass">
-      <h3>Corporate Website</h3>
-      <p>Spectra + Astra custom design.</p>
-    </div>
-    <div class="glass">
-      <h3>SEO Optimized Blog</h3>
-      <p>Schema implementation & metadata optimization.</p>
-    </div>
-  </div>
+<!-- PROJECTS -->
+
+<section id="projects">
+<h2>Featured Projects</h2>
+<div class="grid">
+
+<div class="project-card">
+<img src="project1.jpg" alt="">
+<div class="project-overlay">
+<h3>E-commerce Store</h3>
+<p>WooCommerce Performance Optimized</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="project2.jpg" alt="">
+<div class="project-overlay">
+<h3>Corporate Website</h3>
+<p>Elementor + Astra Custom Design</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="project3.jpg" alt="">
+<div class="project-overlay">
+<h3>SEO Optimized Blog</h3>
+<p>Schema & Metadata Implementation</p>
+</div>
+</div>
+
+</div>
 </section>
 
-<section id="contact" class="fade">
-  <h2>Contact</h2>
-  <div class="glass">
-    <p>Email: shashwathi96@gmail.com</p>
-    <p>LinkedIn: https://www.linkedin.com/in/shashwathi-hebbar-01a456140/</p>
-    <p>GitHub: https://github.com/Shashwathi2306/</p>
-  </div>
+<!-- CONTACT -->
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="glass">
+<p>Email: shashwathi96@gmail.com</p>
+<p>LinkedIn: https://www.linkedin.com/in/shashwathi-hebbar-01a456140/</p>
+<p>GitHub: https://github.com/Shashwathi2306/</p>
+</div>
 </section>
 
 <footer>
-  © 2026 Shashwathi. All Rights Reserved.
+© 2026 Shashwathi K S. All Rights Reserved.
 </footer>
 
 <script>
-const faders = document.querySelectorAll('.fade');
+const text=["WordPress Developer","SEO Specialist","WooCommerce Expert"];
+let count=0,index=0,currentText="",letter="";
 
-const appearOptions = {
-  threshold: 0.2
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add('show');
-      appearOnScroll.unobserve(entry.target);
-    }
-  });
-}, appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
-</script>
-<script>
-const text = ["WordPress Developer", "SEO Specialist", "WooCommerce Expert"];
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
-
-(function type() {
-  if (count === text.length) {
-    count = 0;
-  }
-  currentText = text[count];
-  letter = currentText.slice(0, ++index);
-
-  document.getElementById("typing").textContent = letter;
-  if (letter.length === currentText.length) {
-    setTimeout(() => {
-      index = 0;
-      count++;
-      setTimeout(type, 500);
-    }, 1000);
-  } else {
-    setTimeout(type, 100);
-  }
+(function type(){
+if(count===text.length){count=0;}
+currentText=text[count];
+letter=currentText.slice(0,++index);
+document.getElementById("typing").textContent=letter;
+if(letter.length===currentText.length){
+setTimeout(()=>{index=0;count++;setTimeout(type,500);},1000);
+}else{setTimeout(type,100);}
 })();
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
