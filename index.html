@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name | WordPress Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.3);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #cbd5e1;
+}
+
+.btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: #3b82f6;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2563eb;
+}
+
+section {
+  padding: 100px 10%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.glass:hover {
+  transform: translateY(-10px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0,0,0,0.4);
+  margin-top: 50px;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div><strong>Your Name</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Hi, I'm Your Name 👋</h1>
+  <p>WordPress Developer | SEO Specialist | WooCommerce Expert</p>
+  <a href="#" class="btn">Download Resume</a>
+</div>
+
+<section id="about" class="fade">
+  <h2>About Me</h2>
+  <div class="glass">
+    <p>
+      I am a WordPress Developer with 6+ years experience working on Elementor,
+      Gutenberg, WP Bakery, Spectra, Astra and OceanWP.
+      I specialize in SEO optimization, speed optimization, metadata, schema setup
+      and WooCommerce development.
+    </p>
+  </div>
+</section>
+
+<section id="skills" class="fade">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="glass">WordPress Development</div>
+    <div class="glass">Elementor & Gutenberg</div>
+    <div class="glass">WooCommerce</div>
+    <div class="glass">SEO & Speed Optimization</div>
+    <div class="glass">Schema & Metadata</div>
+    <div class="glass">HTML, CSS, JavaScript</div>
+  </div>
+</section>
+
+<section id="projects" class="fade">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="glass">
+      <h3>E-commerce Store</h3>
+      <p>WooCommerce store with performance optimization.</p>
+    </div>
+    <div class="glass">
+      <h3>Corporate Website</h3>
+      <p>Elementor + Astra custom design.</p>
+    </div>
+    <div class="glass">
+      <h3>SEO Optimized Blog</h3>
+      <p>Schema implementation & metadata optimization.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="fade">
+  <h2>Contact</h2>
+  <div class="glass">
+    <p>Email: yourmail@email.com</p>
+    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+    <p>GitHub: github.com/yourusername</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Your Name. All Rights Reserved.
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+const appearOptions = {
+  threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add('show');
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+</script>
+
+</body>
+</html>
