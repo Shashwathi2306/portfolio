@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name | WordPress Developer</title>
+<title>Shashwathi | WordPress Developer</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 
@@ -119,6 +119,22 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.hero h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #cbd5e1;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 </style>
 </head>
@@ -136,10 +152,11 @@ footer {
 </nav>
 
 <div class="hero">
-  <h1>Hi, I'm Your Name 👋</h1>
-  <p>WordPress Developer | SEO Specialist | WooCommerce Expert</p>
+  <h1>Hi, I'm <span class="gradient">Shashwathi K S</span></h1>
+  <h2><span id="typing"></span></h2>
   <a href="#" class="btn">Download Resume</a>
 </div>
+
 
 <section id="about" class="fade">
   <h2>About Me</h2>
@@ -148,7 +165,7 @@ footer {
       I am a WordPress Developer with 6+ years experience working on Elementor,
       Gutenberg, WP Bakery, Spectra, Astra and OceanWP.
       I specialize in SEO optimization, speed optimization, metadata, schema setup
-      and WooCommerce development.
+      and WooCommerce & Shopify development.
     </p>
   </div>
 </section>
@@ -176,6 +193,10 @@ footer {
       <h3>Corporate Website</h3>
       <p>Elementor + Astra custom design.</p>
     </div>
+	  <div class="glass">
+      <h3>Corporate Website</h3>
+      <p>Spectra + Astra custom design.</p>
+    </div>
     <div class="glass">
       <h3>SEO Optimized Blog</h3>
       <p>Schema implementation & metadata optimization.</p>
@@ -186,14 +207,14 @@ footer {
 <section id="contact" class="fade">
   <h2>Contact</h2>
   <div class="glass">
-    <p>Email: yourmail@email.com</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
-    <p>GitHub: github.com/yourusername</p>
+    <p>Email: shashwathi96@gmail.com</p>
+    <p>LinkedIn: https://www.linkedin.com/in/shashwathi-hebbar-01a456140/</p>
+    <p>GitHub: https://github.com/Shashwathi2306/</p>
   </div>
 </section>
 
 <footer>
-  © 2026 Your Name. All Rights Reserved.
+  © 2026 Shashwathi. All Rights Reserved.
 </footer>
 
 <script>
@@ -217,6 +238,32 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
+</script>
+<script>
+const text = ["WordPress Developer", "SEO Specialist", "WooCommerce Expert"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type() {
+  if (count === text.length) {
+    count = 0;
+  }
+  currentText = text[count];
+  letter = currentText.slice(0, ++index);
+
+  document.getElementById("typing").textContent = letter;
+  if (letter.length === currentText.length) {
+    setTimeout(() => {
+      index = 0;
+      count++;
+      setTimeout(type, 500);
+    }, 1000);
+  } else {
+    setTimeout(type, 100);
+  }
+})();
 </script>
 
 </body>
